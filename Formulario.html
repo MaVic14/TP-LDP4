@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<Title>Formulario</Title>
+</head>
+<body>
+<h2>Formulario</h2>
+<form action=" " method="post" enctype="text/plain" name="Formulario">
+Introduce tu lenguaje de promoción favorito:
+<input type="text" maxlength="20" size="20" name="lenguaje">
+<br/>
+<br/>
+¿Cuánto tiempo llevas programando en él?
+<br/>
+<input type="Radio" name="tiempo" value="0-2" checked> 
+Menos de dos años
+<br/>
+<input type="Radio" name="tiempo" value="2-5">
+De dos a cinco años
+<br/>
+<input type="Radio" name="tiempo" value="5-"> 
+Más de cinco años
+<br/>
+<br/> 
+<br/> 
+¿En qué entornos has usado ese lenguaje?:
+<br/>
+<input type="checkbox" name="entornos" value="descriptorio" checked>
+Descriptorio
+<br/>
+<input type="checkbox" name="entornos" value="web" checked> 
+Web
+<br/>
+<input type="checkbox" name="entornos" value="movilidad">
+Movilidad
+<br/>
+<input type="checkbox" name="entornos" value="empotrado">
+Dispositivos empotrados
+<br/>
+<br/>
+¿Cuántos lenguajes de programación has usado además de tu favorito?
+<br/>
+<select>
+<option value="uno"> uno </option>
+<option value="dos"> dos </option>
+<option value="tres"> tres </option>
+</select>
+<br/>
+<br/>
+¿En cuantos proyectos de software has participado ?
+<br/>
+<select size=3>
+<option value="uno">uno o dos </option>
+<option value="dos"> de tres a cinco </option>
+<option value="tres"> de cinco a 10</option>
+<option value="cuatro"> de 10 a 25 </option>
+<option value="cinco"> de 25 a 50 </option>
+<option value="seis"> más de 50</option>
+</select>
+<br/>
+<br/>
+¿Quieres introducir algún comentario adicional?
+<br/>
+<textarea name="comentario" cols="20" rows="10">Comentario</textarea>
+<br/>
+<button> Enviar formulario</button>
+</form>
+</body>
+</html>
+
