@@ -31,7 +31,7 @@ public class MiServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		PrintWriter out = response.getWriter();
-		out.println("¡¡¡Hola Maru!!!");
+		out.println("¡¡¡Hola Mundo!!!");
 	}
 
 	/**
