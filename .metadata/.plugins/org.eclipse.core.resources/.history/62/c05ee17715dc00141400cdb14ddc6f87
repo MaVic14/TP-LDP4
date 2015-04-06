@@ -1,0 +1,42 @@
+package untref.ldp4;
+
+import java.sql.*;
+
+public class Global {
+
+	
+	//Conexion Mysql
+	public final static String mysqlDrv = "mysql:mysql-connector-java:jar:5.1.34" //com.mysql.jdbc.Driver";
+	public final static String mysqlDb = "jdbc:mysql://localhost";
+	
+	private final static String usuarioMysql = "root";
+	private final static String passwordMysql = "lp4untref";
+	
+	//Java Mail
+	
+	public final static String usuarioMail = "mail@dominio.com";
+	public final static String passwordMail = "miContraseña";
+	
+	//Fin declaraciones globales
+	
+	public Global(){}
+	
+	public static synchronized Connection getConexionDb(String db){
+
+		if(db != null && !db.equals("")){
+			db = "/" + db;
+		}
+			
+		Connection conexion = null;
+		try {
+			Class.forName(mysqlDrv).newInstance();
+			conexion = DriverManager.getConnection(mysqlDb + db,usuarioMysql,passwordMysql);
+
+		}catch (Exception e){
+			e.printStackTrace();
+			conexion = null;
+		}
+
+		return conexion;
+	}
+}
