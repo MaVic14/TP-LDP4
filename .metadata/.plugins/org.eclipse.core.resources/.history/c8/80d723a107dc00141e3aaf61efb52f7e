@@ -1,0 +1,33 @@
+package untref.ldp4;
+
+import java.sql.*;
+
+public class Global {
+
+	private final String usuarioDb = "root";
+	private final String passwordDb = "lp4untref";
+	
+	public Global(){}
+	
+	public Connection getConexionDb(String db){
+		
+		String nombreBaseDeDatos = "";
+		
+		if(db != null && !db.equals("")){
+			nombreBaseDeDatos = ":" + db;
+		}
+			
+		Connection conexion = null;
+		
+		try {
+			conexion = DriverManager.getConnection( "jdbc:mysql" + nombreBaseDeDatos,
+											        usuarioDb,
+											        passwordDb);
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
+		return conexion;
+	}
+}
